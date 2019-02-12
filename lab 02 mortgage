@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab.pkg2_01;
+
+/**
+ *
+ * @author Daniel
+ */import java.util.Scanner;
+public class Lab2_01 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+
+System.out.print("Enter loan Amount:");
+int  loanAmount = s.nextInt();
+System.out.print("Enter numberof Years:");
+int numberYear =s.nextInt();
+System.out.print("Enter Annual Interest Rate:");
+int annualRate = s.nextInt();
+
+double monthlyrate= annualRate/1200;
+double monthlyPayment = loanAmount*monthlyrate/(1 -1/Math.pow(1+monthlyrate,numberYear*12));
+
+
+System.out.printf("%6.3f",monthlyPayment);// TODO code application logic here
+    }
+    
+}
